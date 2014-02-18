@@ -1,0 +1,162 @@
+﻿body {
+    font-family: 'Muli', sans-serif;
+    color: #545a66;
+    font-size: 11px;
+}
+
+label {
+    vertical-align: middle;
+    display: block;
+}
+
+#wrap {
+    width: 800px;
+    height: 600px;
+    background:url("background.jpg");
+    background-color: #3f464e;
+    display: table;
+}
+
+#cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.card {
+    width: 324px;
+    height: 440px;
+    background-color: #171c20;
+    border: 1px solid #171c20;
+    border-radius: 8px 8px;
+    overflow: hidden;
+    display: block;
+    margin: auto;
+    box-shadow: 0px 5px 15px -3px #171c20;
+}
+
+    .card .top {
+        background-color: #e7decd;
+        height: 138px;
+        text-align: center;
+    }
+
+.dots {
+    position: relative;
+    top: 20px;
+    width: 30px;
+    height: 20px;
+    margin: auto;
+}
+
+    .dots span {
+        height: 3px;
+        width: 3px;
+        display: block;
+        border-radius: 10px;
+        float: left;
+        margin: 2px;
+        background: none repeat scroll 0 0 #FCF2E0;
+        box-shadow: 0 -1px 1px #B5AD9D inset;
+    }
+
+.card .top .avatar {
+    position: relative;
+    top: 32px;
+    background-color: #e7dfcd;
+    background: url("avatar.png");
+    border: 5px solid #e7decd;
+    width: 155px;
+    height: 155px;
+    border-radius: 100px;
+    display: block;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 100%;
+    z-index: 10;
+}
+
+    .card .top .avatar:before {
+        -moz-transform: rotate(45deg); /* FF3.5+ */
+        -o-transform: rotate(45deg); /* Opera 10.5 */
+        -webkit-transform: rotate(45deg); /* Saf3.1+, Chrome */
+        content: '';
+        position: absolute;
+        left: 11px;
+        top: -28px;
+        width: 50%;
+        height: 100%;
+        background-image: -webkit-linear-gradient(top, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.0) 60% );
+        background-image: -moz-linear-gradient(top, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.0) 60% );
+        border-radius: 100px 0% 0% 0%;
+    }
+
+.card .middle {
+    height: 246px;
+    border-bottom: 1px solid #171c20;
+    background-color: #2f363e;
+    text-align: center;
+    position: relative;
+}
+
+    .card .middle .fullname {
+        color: #e7e0ce;
+        font-size: 18px;
+        top: 104px;
+        position: relative;
+    }
+
+    .card .middle .title {
+        top: 110px;
+        position: relative;
+    }
+
+    .card .middle .follow {
+        top: 128px;
+        position: relative;
+        width: 162px;
+        height: 38px;
+        margin: auto;
+        background-color: #171c20;
+        border-radius: 6px;
+        border: 1px solid #171c20;
+        overflow: hidden;
+        line-height: 38px;
+    }
+
+        .card .middle .follow label {
+            border-top: 1px solid #d06d58;
+            border-radius: 6px;
+            background-color: #c44b30;
+            color: #e7e0ce;
+        }
+
+.card .bottom {
+}
+
+    .card .bottom div {
+        overflow: hidden;
+        width: 160.5px;
+        height: 55px;
+        vertical-align: middle;
+        line-height: 55px;
+        background-color: #2f363e;
+        border-top: 1px solid #3e424d;
+        text-align: center;
+        border-right: 1px solid #3e424d;
+    }
+
+.left-button {
+    float: left;
+}
+
+.right-button {
+    float: right;
+}
+
+.number {
+    font-weight: bold;
+    color: #191e24;
+    font-size: 16px;
+    vertical-align: middle;
+}
