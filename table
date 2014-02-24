@@ -1,0 +1,36 @@
+<section>
+    <p>Creating a Simple Table</p>
+    <table border="1">
+        <tbody>
+            <tr>
+                <td>January</td>
+                <td>$100</td>
+            </tr>
+            <tr>
+                <td>February</td>
+                <td>$80</td>
+            </tr>
+        </tbody>
+        <thead>
+            <tr>
+                <th>Month</th>
+                <th>Savings</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td>Sum</td>
+                <td>$180</td>
+            </tr>
+        </tfoot>
+    </table>
+</section>
+
+section {
+    padding-bottom: 9px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #cccccc;
+}
+section p{
+    color:rgba(16, 170, 133, 1);
+}
