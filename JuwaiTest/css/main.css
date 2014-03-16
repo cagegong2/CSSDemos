@@ -5,15 +5,22 @@ div {
 a {
     color: #484848;
     text-decoration: none;
+    overflow:hidden;
 }
 
-    a:hover {
-        color: #ff0000;
-        text-decoration: underline;
-    }
+p {
+    overflow-wrap: break-word;
+    margin-top: 0;
+}
+
+a:hover {
+    color: #ff0000;
+    text-decoration: underline;
+    cursor: pointer;
+}
 
 body {
-    font-family: "Helvetica Neue", Helvetica, “Microsoft YaHei”, Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, "Microsoft YaHei", Arial, sans-serif;
     color: #484848;
     font-size: 12px;
     margin: 0;
@@ -45,6 +52,10 @@ body {
 
 .clear {
     clear: both;
+}
+
+.center {
+    text-align: center;
 }
 
 input, .btn {
@@ -229,18 +240,18 @@ input, .btn {
             content: ' > ';
         }
 
-.carousel {
+.presentation {
     margin: 20px 0;
     background: linear-gradient(#333, #ccc);
     padding: 20px 0;
 }
 
-    .carousel .board {
+    .presentation .board {
         width: 980px;
         height: 372px;
     }
 
-        .carousel .board img {
+        .presentation .board img {
             width: 100%;
             height: 100%;
             box-shadow: 0px 5px 15px -3px #171c20;
@@ -254,7 +265,7 @@ input, .btn {
         margin: 2px;
         padding: 10px 20px 10px 30px;
         display: inline-block;
-        width: 270px;
+        width: 268px;
         font-weight: bold;
         height: 52px;
         background-color: #323232;
@@ -300,6 +311,7 @@ input, .btn {
 
 .section {
     margin: 10px 0;
+    position: relative;
 }
 
 .section-header {
@@ -323,6 +335,12 @@ input, .btn {
     margin-bottom: 0px;
 }
 
+.section-header h3 {
+    display: inline-block;
+    font-size: 20px;
+    margin-bottom: 0px;
+}
+
 .section-header small {
     color: #ccc;
     display: inline-block;
@@ -333,8 +351,18 @@ input, .btn {
 }
 
 .title-purple {
-    color: #3f0166;
+    color: #520d82;
     border-bottom: 2px solid #3f0166;
+}
+
+.title-blue {
+    color: #2c4fb5;
+    border-bottom: 2px solid #2c4fb5;
+}
+
+.title-green {
+    color: #00a53f;
+    border-bottom: 2px solid #00a53f;
 }
 
 .section-content {
@@ -342,6 +370,22 @@ input, .btn {
     margin: 10px 0 10px 0;
     box-shadow: 0px 1px 10px -2px #888888;
 }
+
+    .section-content .divider {
+        border: none;
+        height: 5px;
+        background-position-y: -4px;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        background: #aaaaaa; /* Old browsers */
+        background: -moz-radial-gradient(center, ellipse cover, #aaaaaa 0%, #ffffff 55%, #ffffff 99%); /* FF3.6+ */
+        background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#aaaaaa), color-stop(55%,#ffffff), color-stop(99%,#ffffff)); /* Chrome,Safari4+ */
+        background: -webkit-radial-gradient(center, ellipse cover, #aaaaaa 0%,#ffffff 55%,#ffffff 99%); /* Chrome10+,Safari5.1+ */
+        background: -o-radial-gradient(center, ellipse cover, #aaaaaa 0%,#ffffff 55%,#ffffff 99%); /* Opera 12+ */
+        background: -ms-radial-gradient(center, ellipse cover, #aaaaaa 0%,#ffffff 55%,#ffffff 99%); /* IE10+ */
+        background: radial-gradient(ellipse at center, #aaaaaa 0%,#ffffff 55%,#ffffff 99%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aaaaaa', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    }
 
     .section-content .board {
         position: relative;
@@ -354,14 +398,14 @@ input, .btn {
 
 .note {
     display: inline-block;
-    width: 292px;
+    width: 298px;
     height: 234px;
     color: white;
     position: absolute;
     top: 28px;
     right: 0px;
     opacity: 0.7;
-    padding: 20px 28px;
+    padding: 20px 26px;
 }
 
     .note h3 {
@@ -376,5 +420,335 @@ input, .btn {
 }
 
 .note-purple {
-    background-color: #3f0166;
+    background-color: #520d82;
+}
+
+.note-blue {
+    background-color: #2c4fb5;
+}
+
+.note-green {
+    background-color: #00a53f;
+}
+
+.panel {
+    display: block;
+    float: left;
+    margin: 5px;
+    width: 303px;
+    position: relative;
+    height: 230px;
+    background-color: #f6f6f6;
+    box-shadow: 1px 1px 5px -3px #888888;
+}
+
+.panel-header {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #aaa;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.panel-purple .panel-header {
+    background-color: #520d82;
+}
+
+.panel-purple a {
+    color: #520d82;
+}
+
+.panel-blue .panel-header {
+    background-color: #2c4fb5;
+}
+
+.panel-blue a {
+    color: #2c4fb5;
+}
+
+.panel-green .panel-header {
+    background-color: #00a53f;
+}
+
+.panel-green a {
+    color: #00a53f;
+}
+
+.panel-content {
+    padding: 20px;
+}
+
+    .panel-content ul {
+        margin: 0 20px 0 -20px;
+    }
+
+.panel-footer {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+}
+
+.panel-content .gray {
+    overflow-wrap: break-word;
+    margin-top: 20px;
+    list-style: none;
+    color: gray;
+}
+
+.gallery {
+}
+
+    .gallery .figure {
+        float: left;
+        margin: 0 2px;
+    }
+
+.figure p {
+    margin: 0;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    color: #d0d0d0;
+}
+
+.figure img {
+    width: 130px;
+    height: 70px;
+}
+
+.carousel {
+    width: 950px;
+    height: 450px;
+    margin: 20px 0;
+    position: relative;
+}
+
+    .carousel .left-arrow, .carousel .right-arrow {
+        height: 450px;
+        line-height: 450px;
+        top: 0;
+        position: absolute;
+        font-size: 100px;
+        color: #00a53f;
+        transform: scale(0.3,1);
+        -moz-transform: scale(0.3,1);
+        -webkit-transform: scale(0.3,1);
+        cursor: pointer;
+    }
+
+    .carousel .disabled {
+        color: #d2d2d2;
+    }
+
+    .carousel .left-arrow {
+        left: 30px;
+    }
+
+    .carousel .right-arrow {
+        right: 30px;
+    }
+
+.carousel-indicators {
+    padding: 0;
+    margin: auto;
+    width: 712px;
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+}
+
+    .carousel-indicators .active {
+        display: block;
+        left: 0;
+    }
+
+    .carousel-indicators .left {
+        display: block;
+        left: -100%;
+    }
+
+    .carousel-indicators .right {
+        display: block;
+        left: 100%;
+    }
+
+.carousel-item {
+    top: 0;
+    display: none;
+    list-style: none;
+    position: absolute;
+    margin: 0px;
+    width: 712px;
+    height: 450px;
+    background-color: #ccc;
+    -webkit-transition: .6s ease-in-out left;
+    transition: .6s ease-in-out left;
+}
+
+    .carousel-item img {
+        width: 100%;
+        height: 100%;
+    }
+
+.img-cover {
+    background-color: black;
+    opacity: 0.8;
+    height: 80px;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    padding: 0 20px;
+    right: 0;
+    left: 0;
+}
+
+    .img-cover h3 {
+        margin: 10px 0 5px 0;
+        font-size: 18px;
+        color: #00a53f;
+    }
+
+    .img-cover p {
+        margin-top: 0;
+        overflow-wrap: break-word;
+    }
+
+.tile-group {
+    margin-top: 10px;
+    border: 1px solid #ccc;
+}
+
+.tile {
+    width: 324px;
+    height: 116px;
+    border: 1px solid #ccc;
+    float: left;
+}
+
+    .tile h4 {
+        font-size: 16px;
+        margin: 15px 40px 10px 40px;
+    }
+
+    .tile .dash {
+        display: inline-block;
+        height: 1px;
+        width: 40px;
+        background-color: #888888;
+        vertical-align: middle;
+    }
+
+    .tile small {
+        color: #888888;
+    }
+
+    .tile p {
+        margin: 0 40px;
+        color: #888888;
+    }
+
+.about {
+    background-color: #eeeeee;
+    height: 162px;
+    margin: 30px 0;
+}
+
+.about-left {
+    display: inline-block;
+    padding: 0 50px 0 40px;
+    width: 514px;
+    border-right: 1px solid #888888;
+    margin-top: 20px;
+}
+
+    .about-left h2 {
+        margin-top: 0;
+    }
+
+    .about-left p {
+        margin-bottom: 0;
+    }
+
+    .about-left a {
+        color: red;
+    }
+
+.about-right {
+    display: inline-block;
+    vertical-align: top;
+    margin: 30px 0 auto 18px;
+}
+
+    .about-right div {
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 10px;
+    }
+
+    .about-right .phone {
+        font-size: 36px;
+        color: #b5b5b5;
+    }
+
+.footer {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+    .footer a {
+        margin: 10px;
+    }
+
+.bottom {
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    text-align: center;
+}
+
+.bottomBar {
+    height: 23px;
+    line-height: 23px;
+    position:relative;
+    overflow:hidden;
+    width: 1000px;
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #e2e2e2 43%, #aaaaaa 99%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(43%,#e2e2e2), color-stop(99%,#aaaaaa)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#e2e2e2 43%,#aaaaaa 99%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ffffff 0%,#e2e2e2 43%,#aaaaaa 99%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ffffff 0%,#e2e2e2 43%,#aaaaaa 99%); /* IE10+ */
+    background: linear-gradient(to bottom, #ffffff 0%,#e2e2e2 43%,#aaaaaa 99%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#aaaaaa',GradientType=0 ); /* IE6-9 */
+    border: 1px solid #aaaaaa;
+    border-radius: 4px;
+    margin: auto;
+    text-align: left;
+}
+
+    .bottomBar label {
+        margin: 0 20px;
+        float: left;
+    }
+
+    .bottomBar .divider {
+        width: 1px;
+        height: 23px;
+        background-color: #aaaaaa;
+        float: left;
+    }
+
+.text-display {
+    padding: 0 10px;
+    height: 16px;
+    line-height: 16px;
+    display: inline-block;
+    margin: 2px;
+    background-color: white;
+    border: 1px solid #BDBDBD;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
 }
